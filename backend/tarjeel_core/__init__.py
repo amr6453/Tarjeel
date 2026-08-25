@@ -1,0 +1,1 @@
+# Tarjeel Django Core Package

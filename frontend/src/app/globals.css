@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FAF8F5;
+  --foreground: #262119;
+  --font-cairo: 'Cairo', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+  font-family: var(--font-cairo);
+  direction: rtl;
+  text-align: right;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DFD5C0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B88836;
+}
+
+/* Luxury Glassmorphism & Cards */
+.luxury-card {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(223, 213, 192, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(180, 136, 54, 0.07);
+}
+
+.luxury-card-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 136, 54, 0.5);
+  box-shadow: 0 20px 35px -10px rgba(180, 136, 54, 0.12);
+}
+
+/* Scalloped / Organic Arched Mask for Hero image */
+.hero-arched-mask {
+  border-radius: 120px 40px 120px 40px;
+}
+
+@media (min-width: 768px) {
+  .hero-arched-mask {
+    border-radius: 180px 60px 180px 60px;
+  }
+}
+
+.card-arch-top {
+  border-radius: 100px 100px 24px 24px;
+}
+
+/* Ambient glow blobs */
+.ambient-glow-top-left {
+  background: radial-gradient(circle at 10% 20%, rgba(220, 200, 255, 0.25) 0%, rgba(253, 240, 208, 0.3) 40%, transparent 70%);
+}
+
+.ambient-glow-top-right {
+  background: radial-gradient(circle at 90% 15%, rgba(254, 235, 200, 0.35) 0%, rgba(245, 230, 245, 0.2) 50%, transparent 75%);
+}
+
